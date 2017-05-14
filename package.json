@@ -1,0 +1,30 @@
+{
+  "name": "place-search-sdk",
+  "version": "1.0.0",
+  "description": "Search for near by place, get geolocation, place images and place details",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhi11210646/place-search-sdk.git"
+  },
+  "author": "Abhishek Singh",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "got",
+    "place",
+    "search",
+    "api",
+    "querystring"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhi11210646/place-search-sdk/issues"
+  },
+  "homepage": "https://github.com/abhi11210646/place-search-sdk#readme",
+  "dependencies": {
+    "got": "6.7.1",
+    "querystring": "0.2.0"
+  }
+}
