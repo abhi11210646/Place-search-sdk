@@ -1,22 +1,51 @@
-
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+# Place Search
+> Search for near by place, get geolocation, place images and place details
 
 
-Welcome to your Node.js project on Cloud9 IDE!
+## Installation
 
-This chat example showcases how to use `socket.io` with a static `express` server.
+```
+$ npm i place-search-sdk
 
-## Running the server
+```
 
-1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
 
-2) Alternatively you can launch the app from the Terminal:
+## Usage
 
-    $ node server.js
+**Note**: You'll need to Enable place API key in google developer console(https://console.developers.google.com/).
 
-Once the server is running, open the project in the shape of 'https://projectname-username.c9users.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
+```js
+const googlePlace = require('place-search-sdk');
+
+const client = new googlePlace('API-KEY')
+
+### geolocation 
+    client.getGeoLocation('jalandhar')
+    	.then(latlong => {
+    		/*
+            	{
+            	    lat: 30.05758,
+            	    lng: 31.94734
+            	}
+    		 */
+    	});
+    	
+### nearbysearch	
+	client.nearBySearch({geoCode: {lat:30.097575, lng: 31.3784737} , searchType: 'restaurant'})
+	.then(result=>{
+	    /*[{
+            	   return all places with title , place id, photo reference etc
+            }]
+    	*/
+	});
+### place image
+    photo_reference is a id returned by nearby search.
+	client.getPlaceImage('photo_reference')
+		.then(result=>{
+	    /*[{
+            	   will return image of place.
+            }]
+    	*/
+	});
+
+```

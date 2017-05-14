@@ -1,1 +1,1 @@
-module.exports =require("./lib/google-place");
+module.exports = require("./lib/google-place");
