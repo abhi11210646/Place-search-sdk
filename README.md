@@ -34,7 +34,13 @@ const client = new googlePlace('API-KEY')
 	client.nearBySearch({geoCode: {lat:30.097575, lng: 31.3784737} , searchType: 'restaurant'})
 	.then(result=>{
 	    /*[{
-            	   return all places with title , place id, photo reference etc
+             return all places with details title, place id, photo reference, geomatric location, rating etc etc.
+            	name:
+                icon:
+                rating:
+                photo_reference: 
+                address: 
+                placeId: 
             }]
     	*/
 	});
@@ -44,6 +50,24 @@ const client = new googlePlace('API-KEY')
 		.then(result=>{
 	    /*[{
             	   will return image of place.
+            }]
+    	*/
+	});
+	### place details
+    photo_reference is a id returned by nearby search.
+	client.getPlaceDetails('placeid')
+		.then(result=>{
+	    /*[{
+            	will return all details of a place. like
+            	address: 
+                phoneNumber: 
+                phoneNumberInternational: 
+                rating: 
+                website: 
+                utc_offset:
+                photos: 
+                reviews: 
+                opening_hours:
             }]
     	*/
 	});
