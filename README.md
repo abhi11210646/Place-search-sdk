@@ -18,8 +18,9 @@ $ npm i place-search-sdk
 const googlePlace = require('place-search-sdk');
 
 const client = new googlePlace('API-KEY')
-
+```
 ### geolocation 
+```js
     client.getGeoLocation('jalandhar')
     	.then(latlong => {
     		/*
@@ -29,8 +30,9 @@ const client = new googlePlace('API-KEY')
             	}
     		 */
     	});
-    	
-### nearbysearch	
+  ```
+### nearbysearch
+```js
 	client.nearBySearch({geoCode: {lat:30.097575, lng: 31.3784737} , searchType: 'restaurant'})
 	.then(result=>{
 	    /*[{
@@ -44,8 +46,10 @@ const client = new googlePlace('API-KEY')
             }]
     	*/
 	});
+```
 ### place image
     photo_reference is a id returned by nearby search.
+```js
 	client.getPlaceImage('photo_reference')
 		.then(result=>{
 	    /*[{
@@ -53,8 +57,10 @@ const client = new googlePlace('API-KEY')
             }]
     	*/
 	});
-	### place details
-    photo_reference is a id returned by nearby search.
+```
+### place details
+    placeId is a id returned by nearby search.
+```js
 	client.getPlaceDetails('placeid')
 		.then(result=>{
 	    /*[{
