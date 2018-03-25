@@ -1,5 +1,5 @@
 # Place Search
-> Search for near by place, get geolocation, place images and place details
+> Search for near by place, get geolocation, place images and place details!
 
 
 ## Installation
@@ -12,7 +12,8 @@ $ npm i place-search-sdk
 
 ## Usage
 
-**Note**: You'll need to Enable place API key in google developer console(https://console.developers.google.com/).
+**Note**: You'll need to Enable place API key in google developer console (https://console.developers.google.com/).
+***Node Version: > 6.x.x***
 
 ```js
 const googlePlace = require('place-search-sdk');
