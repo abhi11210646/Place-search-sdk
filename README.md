@@ -12,7 +12,8 @@ $ npm i place-search-sdk
 
 ## Usage
 
-**Note**: You'll need to Enable place API key in google developer console (https://console.developers.google.com/).
+**Note**: You'll need to Enable place API key in google developer [console](https://console.developers.google.com). Follow these steps of 
+[officially document](https://developers.google.com/places/web-service/get-api-key).
 ***Node Version: > 6.x.x***
 
 ```js
