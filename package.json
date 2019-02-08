@@ -1,6 +1,6 @@
 {
   "name": "place-search-sdk",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Search for near by place, get geolocation, place images and place details",
   "main": "server.js",
   "repository": {
@@ -9,7 +9,7 @@
   },
   "author": "Abhishek Singh",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --timeout 15000 --colors --verbose -- __tests__/**/*.js"
   },
   "keywords": [
     "got",
@@ -26,5 +26,9 @@
   "dependencies": {
     "got": "6.7.1",
     "querystring": "0.2.0"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "mocha": "5.2.0"
   }
 }

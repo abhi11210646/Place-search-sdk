@@ -52,7 +52,8 @@ client.nearBySearch({geoCode: {lat:30.097575, lng: 31.3784737} , searchType: 're
 ### Place Image
 photo_reference is a id returned by nearby search.
 ```js
-client.getPlaceImage('photo_reference')
+'maxwidth','maxheight' have default value to 400px, 400px respectively.
+client.getPlaceImage('photo_reference', 'maxwidth','maxheight')
 	.then(result=>{
     /*[{
         	   will return image of place.
